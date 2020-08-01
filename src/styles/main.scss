@@ -1,7 +1,48 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+* {
+  box-sizing: border-box;
+}
 
-body {
-  background: $c-gray;
+@mixin header {
+  text-align: center;
+  font-size: 32px;
+}
+
+$text-size: 20px;
+
+.wrapper {
+  padding: 2% 5%;
+}
+
+.rules {
+  &__header {
+    @include header;
+  }
+  &__text {
+    font-size: $text-size;
+  }
+}
+
+.game {
+  &__header {
+    @include header;
+  }
+  
+  &__label {
+    font-size: $text-size;
+  }
+  
+  &__input {
+    margin: 20px 0;
+    height: 40px;
+  }
+  
+  &__button {
+    font-size: $text-size;
+  }
+}
+
+.log {
+  &__header {
+    @include header;
+  }
 }
